@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #12121e;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Universal Styling */
+.about-container, .contact-container {
+  text-align: center;
+  padding: 40px;
+  background: #1e1e2f;
+  color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.about-title, .contact-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+  margin-bottom: 20px;
+}
+
+.about-description, .contact-description {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+/* About Page Specific */
+.about-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.about-card {
+  background: #29293d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+}
+
+.about-card h3 {
+  font-size: 20px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+/* Contact Page Specific */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #29293d;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border: 2px solid #ffcc00;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.submit-btn {
+  background: #ff5722;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #ff4500;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container, .contact-container {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 90%;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}

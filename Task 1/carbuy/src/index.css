@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+.car-list-container {
+  text-align: center;
+  padding: 60px 20px 20px; 
+  margin-top: 360px;
+}
+
+.search-bar {
+  margin: 30px auto 20px; 
+  width: 50%;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 2px solid orangered;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.search-bar input:focus {
+  border-color: orange;
+  box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.7);
+}
+
+.car-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center; 
+  overflow-x: auto; 
+  min-height: 60vh; 
+}
+
+.car-card {
+  flex: 0 0 calc(30% - 20px); 
+  background: #222;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  min-width: 280px; 
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* 🚀 Hover Effects */
+.car-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(255, 69, 0, 0.6);
+}
+
+/* 🔎 No Results */
+.no-results {
+  font-size: 1.2rem;
+  color: red;
+  margin-top: 20px;
+}
+
+
+  
+/* Container */
+.car-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #07070754;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  gap: 30px;
+}
+
+/* Image Styling */
+.car-image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.car-details-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+
+/* Car Info */
+.car-info {
+  flex: 1;
+  text-align: left;
+  padding: 10px;
+}
+
+.car-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.car-origin, .car-price {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+/* Features List */
+.car-features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.car-features li {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+    background: linear-gradient(135deg, #ff6600, #ff4500);
+    color: white;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover effect */
+  .buy-now-btn:hover {
+    background: linear-gradient(135deg, #ff4500, #e63900);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Active (Click) effect */
+  .buy-now-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Ripple effect */
+  .buy-now-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+  }
+  
+  .buy-now-btn:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  
+
+/* Responsive */
+@media (max-width: 768px) {
+  .car-details-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .car-info {
+    text-align: center;
+  }
+}
+.reviews-container {
+  text-align: center;
+  padding: 40px;
+  background: #1e1e2f;
+  color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.reviews-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+  margin-bottom: 20px;
+}
+
+.reviews-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.review-card {
+  background: #29293d;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.review-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ffcc00;
+  margin-bottom: 10px;
+}
+
+.review-rating {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ffcc00;
+}
+
+.review-comment {
+  font-size: 16px;
+  color: #ddd;
+  font-style: italic;
+  padding: 0 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reviews-container {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .reviews-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 90%;
+  }
+}
+
+.footer-container {
+  background: #1e1e2f;
+  color: white;
+  padding: 0px 20px;
+  text-align: center;
+  border-top: 4px solid #ff6600;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  color: #ffcc00;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-links h3, .footer-social h3 {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff6600;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6600;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.btm{
+  margin-left: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+

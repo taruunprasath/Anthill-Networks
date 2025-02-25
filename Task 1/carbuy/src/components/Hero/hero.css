@@ -1,0 +1,176 @@
+/* Global Style */
+body {
+    overflow-x: hidden;
+    background-color: #0d0d0d; /* Dark background */
+    color: white;
+}
+
+/* Hero Section */
+.hero-container {
+    width: 100vw;
+    margin-top: 1200px;
+    height: 90vh;
+    background: url("../../assets/hero.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+/* Dark Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Left Side Content */
+.hero-content {
+    color: white;
+    z-index: 2;
+    max-width: 45%;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    opacity: 0.85;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.hero-button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.3);
+    display: inline-block;
+}
+
+.hero-button:hover {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transform: scale(1.08);
+    box-shadow: 0px 5px 15px rgba(255, 75, 43, 0.5);
+}
+
+/* Right Side: Form */
+.hero-form-container {
+    background: rgba(25, 25, 25, 0.8); /* Semi-transparent dark background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(8px); /* Smooth glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Dark Theme Inputs */
+.hero-form {
+    width: 100%;
+}
+
+.hero-form .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.hero-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff; /* Light grey text */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Transparent Inputs with Glow */
+.hero-form input,
+.hero-form select {
+    width: 95%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3); /* Slightly transparent */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Glow effect on focus */
+.hero-form input:focus,
+.hero-form select:focus {
+    border-color: #22ccdd;
+    box-shadow: 0px 0px 8px rgba(34, 204, 221, 0.7);
+}
+
+/* Submit Button */
+.submit-button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+/* Glow effect on hover */
+.submit-button:hover {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+        height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .hero-form-container {
+        width: 90%;
+        max-width: 400px;
+        margin-top: 20px;
+    }
+}
